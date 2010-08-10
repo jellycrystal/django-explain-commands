@@ -7,7 +7,7 @@ setup(
     long_description=open('README.rst').read(),
     author='Yury Yurevich',
     author_email='yyurevich@jellycrystal.com',
-    url='https://github.com/j2a/django-explain-command',
+    url='https://github.com/jellycrystal/django-explain-commands',
     license='BSD',
     include_package_data=True,
     zip_safe=True,
