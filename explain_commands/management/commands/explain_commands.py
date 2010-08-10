@@ -5,7 +5,7 @@ def group_commands():
     for command, provider in get_commands().items():
         if isinstance(provider, basestring):
             key = provider
-        if isinstance(provider, base.BaseCommand):
+        elif isinstance(provider, base.BaseCommand):
             mod = provider.__module__
             idx = mod.find('management') - 1
             key = mod[:idx]
@@ -17,7 +17,7 @@ def group_commands():
 
 def print_commands(grouped):
     for provider in sorted(grouped.keys()):
-        print "%s =>" % prov
+        print "%s =>" % provider
         for command in grouped[provider]:
             print "\t%s" % command
 
