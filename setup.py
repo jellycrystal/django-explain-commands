@@ -4,7 +4,7 @@ setup(
     name='django-explain-commands',
     version='0.1',
     description='Django app for explaining where commands are coming from.',
-    long_description=open('README.rst').read(),
+    long_description=open('README.md').read(),
     author='Yury Yurevich',
     author_email='yyurevich@jellycrystal.com',
     url='https://github.com/jellycrystal/django-explain-commands',
