@@ -13,11 +13,11 @@ setup(
     zip_safe=True,
     # Get more strings from http://www.python.org/pypi?:action=list_classifiers
     classifiers=[
-            'Development Status :: Beta',
+            'Development Status :: 4 - Beta',
             'Environment :: Web Environment',
             'Framework :: Django',
             'Intended Audience :: Developers',
-            'License :: OSI Approved :: BSD',
+            'License :: OSI Approved :: BSD License',
             'Operating System :: OS Independent',
             'Programming Language :: Python',
             'Topic :: Software Development :: Libraries :: Python Modules',
