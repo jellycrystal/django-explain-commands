@@ -1,0 +1,2 @@
+include README.md
+prune django_explain_commands.egg-info/
