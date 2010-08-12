@@ -26,7 +26,11 @@ def group_commands():
 def print_commands(grouped):
     style = color_style()
     for provider in sorted(grouped.keys()):
-        print style.PROVIDER(provider) + " =>"
+        if provider.startswith('?'):
+            pstyle = style.UNKNOWN
+        else:
+            pstyle = style.PROVIDER
+        print pstyle(provider) + " =>"
         for command in grouped[provider]:
             print "\t" + style.COMMAND(command)
 
