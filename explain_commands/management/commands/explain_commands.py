@@ -1,4 +1,12 @@
-from django.core.management import base, get_commands
+from django.core.management import base, get_commands, color
+from django.utils import termcolors
+
+def color_style():
+    style = color.color_style()
+    style.PROVIDER = termcolors.make_style(fg='green', opts=('bold',))
+    style.COMMAND = termcolors.make_style(opts=('bold',))
+    style.UNKNOWN = termcolors.make_style(fg='red')
+    return style
 
 def group_commands():
     grouped = {}
@@ -16,10 +24,11 @@ def group_commands():
 
 
 def print_commands(grouped):
+    style = color_style()
     for provider in sorted(grouped.keys()):
-        print "%s =>" % provider
+        print style.PROVIDER(provider) + " =>"
         for command in grouped[provider]:
-            print "\t%s" % command
+            print "\t" + style.COMMAND(command)
 
 def explain_commands():
     print_commands(group_commands())
