@@ -9,8 +9,6 @@ Installation
 
  1. pip install django-explain-commands
 
-     git clone git://github.com/jellycrystal/django-explain-commands.git
-
  2. Add `explain_commands` to `INSTALLED_APPS`.
 
 Usage
