@@ -49,7 +49,7 @@ def explain_commands():
     print_commands(group_commands())
 
 class Command(base.NoArgsCommand):
-    help = "Explain where each command coming from"
+    help = "Explain where each command is coming from."
 
     def handle_noargs(self, **options):
         explain_commands()

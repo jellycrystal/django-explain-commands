@@ -1,21 +1,17 @@
 django-explain-commands
 =======================
 
-Are you tired to find where each command coming from? `django-explain-commands`
+Are you tired to find where each command coming from? django-explain-commands
 helps you to find which Django application provides each command.
 
 Installation
 ------------
 
- 1. Obtain source via git clone:
+ 1. pip install django-explain-commands
 
      git clone git://github.com/jellycrystal/django-explain-commands.git
 
- 2. Install as regular package:
-
-     python setup.py install
-
- 3. Add `explain_commands` to `INSTALLED_APPS`.
+ 2. Add `explain_commands` to `INSTALLED_APPS`.
 
 Usage
 -----
@@ -26,72 +22,44 @@ Sample output:
 
     $ python manage.py explain_commands
     django.contrib.auth =>
-        changepassword
-        createsuperuser
+        changepassword -- Change a user's password for django.contrib.auth.
+        createsuperuser -- Used to create a superuser.
     django.core =>
-        cleanup
-        compilemessages
-        createcachetable
-        dbshell
-        diffsettings
-        dumpdata
-        flush
-        inspectdb
-        loaddata
-        makemessages
-        reset
-        runfcgi
-        runserver
-        shell
-        sql
-        sqlall
-        sqlclear
-        sqlcustom
-        sqlflush
-        sqlindexes
-        sqlinitialdata
-        sqlreset
-        sqlsequencereset
-        startapp
-        validate
-    django_extensions =>
-        clean_pyc
-        compile_pyc
-        create_app
-        create_command
-        create_jobs
-        describe_form
-        dumpscript
-        export_emails
-        generate_secret_key
-        graph_models
-        mail_debug
-        passwd
-        print_user_for_session
-        reset_db
-        runjob
-        runjobs
-        runprofileserver
-        runscript
-        runserver_plus
-        set_fake_emails
-        set_fake_passwords
-        shell_plus
-        show_templatetags
-        show_urls
-        sqldiff
-        sync_media_s3
-        syncdata
-        unreferenced_files
+        cleanup -- Can be run as a cronjob or directly to clean ou...
+        compilemessages -- Compiles .po files to .mo files for use with bu...
+        createcachetable -- Creates the table needed to use the SQL cache b...
+        dbshell -- Runs the command-line client for specified data...
+        diffsettings -- Displays differences between the current settin...
+        dumpdata -- Output the contents of the database as a fixtur...
+        flush -- Executes ``sqlflush`` on the current database.
+        inspectdb -- Introspects the database tables in the given da...
+        loaddata -- Installs the named fixture(s) in the database.
+        makemessages -- Runs over the entire source tree of the current...
+        reset -- Executes ``sqlreset`` for the given app(s) in t...
+        runfcgi -- Runs this project as a FastCGI application. Req...
+        runserver -- Starts a lightweight Web server for development.
+        shell -- Runs a Python interactive interpreter. Tries to...
+        sql -- Prints the CREATE TABLE SQL statements for the ...
+        sqlall -- Prints the CREATE TABLE, custom SQL and CREATE ...
+        sqlclear -- Prints the DROP TABLE SQL statements for the gi...
+        sqlcustom -- Prints the custom table modifying SQL statement...
+        sqlflush -- Returns a list of the SQL statements required t...
+        sqlindexes -- Prints the CREATE INDEX SQL statements for the ...
+        sqlinitialdata -- RENAMED: see 'sqlcustom'
+        sqlreset -- Prints the DROP TABLE SQL, then the CREATE TABL...
+        sqlsequencereset -- Prints the SQL statements for resetting sequenc...
+        startapp -- Creates a Django app directory structure for th...
+        validate -- Validates all installed models.
     explain_commands =>
-        explain_commands
+        explain_commands -- Explain where each command is coming from.
     south =>
-        convert_to_south
-        datamigration
-        graphmigrations
-        migrate
-        schemamigration
-        startmigration
-        syncdb
-        test
-        testserver
+        convert_to_south -- Quickly converts the named application to use S...
+        datamigration -- Creates a new template data migration for the g...
+        graphmigrations -- Outputs a GraphViz dot file of all migration de...
+        migrate -- Runs migrations for all apps.
+        schemamigration -- Creates a new template schema migration for the...
+        startmigration -- Depereciated command
+        syncdb -- Create the database tables for all apps in INST...
+        test -- Runs the test suite for the specified applicati...
+        testserver -- Runs a development server with data from the gi...
+
