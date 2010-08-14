@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='django-explain-commands',
-    version='0.1.1',
+    version='0.2',
     description='Django app for explaining where commands are coming from.',
     long_description=open('README.md').read(),
     author='Yury Yurevich',
